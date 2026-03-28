@@ -1,0 +1,50 @@
+/* =============================================================
+   Via Latina — Latin Callout Styles for Obsidian
+
+   Six custom callout types used by commentatio skill:
+   - [!quaero]  I ask       — Questions requiring research
+   - [!emendo]  I improve   — Improvement suggestions
+   - [!disco]   I learn     — Study items and learning paths
+   - [!facio]   I do        — Action items and tasks
+   - [!moneo]   I remind    — Important highlights and connections
+   - [!cogito]  I think     — Free-form musings and reflections
+
+   Install: Copy this file to your vault's .obsidian/snippets/ folder,
+   then enable it in Settings → Appearance → CSS Snippets.
+   ============================================================= */
+
+/* --- [!quaero] — Questions (I ask) --- */
+.callout[data-callout="quaero"] {
+  --callout-color: 66, 135, 245;       /* Royal Blue */
+  --callout-icon: help-circle;
+}
+
+/* --- [!emendo] — Improvements (I improve) --- */
+.callout[data-callout="emendo"] {
+  --callout-color: 245, 166, 35;       /* Amber */
+  --callout-icon: pencil;
+}
+
+/* --- [!disco] — Study Items (I learn) --- */
+.callout[data-callout="disco"] {
+  --callout-color: 76, 175, 80;        /* Green */
+  --callout-icon: book-open;
+}
+
+/* --- [!facio] — Actions (I do) --- */
+.callout[data-callout="facio"] {
+  --callout-color: 233, 30, 99;        /* Pink/Red */
+  --callout-icon: list-checks;
+}
+
+/* --- [!moneo] — Important (I remind) --- */
+.callout[data-callout="moneo"] {
+  --callout-color: 156, 39, 176;       /* Purple */
+  --callout-icon: alert-triangle;
+}
+
+/* --- [!cogito] — Musings (I think) --- */
+.callout[data-callout="cogito"] {
+  --callout-color: 0, 188, 212;        /* Cyan */
+  --callout-icon: lightbulb;
+}
