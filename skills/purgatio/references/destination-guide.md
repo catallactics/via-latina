@@ -22,7 +22,7 @@
 | Meeting Type | Destination | Notes |
 |-------------|-------------|-------|
 | Project-specific post | `{project}/refined/rXX.` | Follows project rXX naming |
-| Series/recurring post | `65. Meeting Records/post/` | Ops Team, All Hands, etc. |
+| Series/recurring post | `65. Meeting Records/post/` | Mkt Dept, All Hands, etc. |
 | No-project post | `65. Meeting Records/post/` | New collab, strategy review |
 | Pre-meeting prep | `65. Meeting Records/pre/` | Prep Doc + Brief |
 | Meeting index | `65. Meeting Records/logs/` | Series index, master index |
@@ -55,15 +55,20 @@ tags: [essay/reflection]
 ```
 Principles: Preserve core emotion/intent, structure scattered thoughts into logical flow, include notable original quotes as `>[!quote]`, bidirectional links to source required.
 
-### Knowledge Content (OECD 6-Category)
+### Knowledge Content (6-Category)
 
-Route to OECD-based subfolders (see `vault-structure.md` for domain classification):
+Route to subfolders (see `vault-structure.md` for domain classification).
+**Dynamic routing**: When unsure, `ls "30. KNOWLEDGE/"` to check current categories.
 
 | Content Type | Destination | Notes |
 |--------------|-------------|-------|
-| Humanities & Arts | `30. KNOWLEDGE/31. Humanities & Arts/` | 철학, 미학, 예술, 언어, 역사 |
-| Social Sciences | `30. KNOWLEDGE/32. Social Sciences/` | 심리학, 사회학, 경제학, 정치학 |
-| Engineering & Tech | `30. KNOWLEDGE/33. Engineering & Tech/` | 컴퓨터과학, 전자공학, 기술 |
+| Philosophy & Culture | `30. KNOWLEDGE/31. Philosophy & Culture/` | 철학, 문화이론, 정치사상, 사고방법론 |
+| Art & Aesthetics | `30. KNOWLEDGE/32. Art & Aesthetics/` | 미학, 예술운동, 영화, 인터넷미학 |
+| Psychology & Society | `30. KNOWLEDGE/33. Psychology & Society/` | 심리학, 사회학, 문화비평 |
+| AI & LLM | `30. KNOWLEDGE/34. AI & LLM/` | AI 도구, 모델, 에이전트, 프롬프트 |
+| AI — Claude Code | `30. KNOWLEDGE/34. AI & LLM/Claude Code/` | Claude Code 전용 (팁, 플러그인, 워크플로우) |
+| Software & Dev | `30. KNOWLEDGE/35. Software & Dev/` | 웹개발, DevOps, 지식관리도구, 비-AI 기술 |
+| Life & Practical | `30. KNOWLEDGE/36. Life & Practical/` | 건강, 가구, 학습법, 수리, 금융 |
 
 ### Incubating Content
 
@@ -118,7 +123,8 @@ Vault structure, folder organization, configuration changes.
 | Content | Destination |
 |---------|-------------|
 | Vault diagnostics/audits | `90. SYSTEM/97. Verification-Reports/` |
-| System guides | `94. System Guides/{matching guide}/` |
+| CLAUDE.md related | `94b. Claude-Code/guides/` |
+| Other system guides | `94. System Guides/{matching 94x}/` |
 
 ### Category 2: Skill
 
@@ -126,7 +132,11 @@ Skill optimization, bug fixes, new skill design.
 
 | Content | Destination |
 |---------|-------------|
-| Skill-related notes | `94. System Guides/{matching guide}/` |
+| Via Latina skills | `94h. Via Latina/updates/` |
+| Claude Code skills | `94b. Claude-Code/guides/` |
+| TouchDesigner skills | `94g. TouchDesigner/guides/` |
+| MCP related | `94f. MCP/guides/` |
+| Other skill domains | `94. System Guides/{matching guide}/` |
 
 ### Category 3: Engineering Knowledge
 
@@ -134,7 +144,8 @@ Reusable technical knowledge discovered during system/skill work.
 
 | Content | Destination |
 |---------|-------------|
-| All engineering insights | `30. KNOWLEDGE/33. Engineering & Tech/` |
+| AI/LLM insights | `30. KNOWLEDGE/34. AI & LLM/` |
+| Non-AI engineering insights | `30. KNOWLEDGE/35. Software & Dev/` |
 
 **Rules**:
 - Archive original to `Quick Notes/archive/` (same as standard lifecycle)
@@ -150,7 +161,7 @@ When a Quick Note has a `relocated-from` frontmatter tag, it was bulk-moved from
 ```yaml
 # Example frontmatter
 ---
-relocated-from: 90. SYSTEM/94. System Guides/Claude-Code/
+relocated-from: 90. SYSTEM/94. System Guides/94b. Claude-Code/
 ---
 ```
 

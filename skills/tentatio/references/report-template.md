@@ -105,7 +105,7 @@ Omit sections with 0 findings.
 | `/tentatio 50-NNNNNN` | `프로젝트: 50-NNNNNN. Name` | 1, 3, 4 |
 | `/tentatio --skills` | `스킬 건강 (Skills only)` | 5 |
 | `/tentatio --knowledge` | `지식 신선도 (Knowledge only)` | 6, 9 + 학습 우선순위 |
-| `/tentatio --knowledge 33` | `지식 신선도: 33. Engineering & Tech` | 6 (filtered) + 학습 우선순위 |
+| `/tentatio --knowledge 34` | `지식 신선도: 34. AI & LLM` | 6 (filtered) + 학습 우선순위 |
 | `/tentatio --sessions` | `세션 후속 조치 (Sessions)` | 10 |
 | `/tentatio --evolve` | `자가 진화 분석 (Evolve)` | Self-Evolution section |
 

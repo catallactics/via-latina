@@ -27,10 +27,14 @@
 ├── 24. Papers/                     ← Academic/research papers
 └── 25. Reports/                    ← Analysis reports, indagatio results
 
-30. KNOWLEDGE/                      ← Established knowledge (OECD 3-category)
-├── 31. Humanities & Arts/          ← 인문학, 예술, 철학
-├── 32. Social Sciences/            ← 사회과학, 심리학, 경제학
-└── 33. Engineering & Tech/         ← 공학, 컴퓨터과학, 기술
+30. KNOWLEDGE/                      ← Established knowledge (6-category)
+├── 31. Philosophy & Culture/       ← 철학, 문화이론, 정치사상
+├── 32. Art & Aesthetics/           ← 미학, 예술, 영화, 인터넷미학
+├── 33. Psychology & Society/       ← 심리학, 사회학, 문화비평
+├── 34. AI & LLM/                   ← AI 도구, 모델, 에이전트
+│   └── Claude Code/                ← Claude Code 전용
+├── 35. Software & Dev/             ← 웹개발, DevOps, 비-AI 기술
+└── 36. Life & Practical/           ← 건강, 학습법, 수리, 생활
 
 40. MAPS/                           ← Navigation
 ├── 41. Dashboards/
@@ -80,28 +84,35 @@
 
 ---
 
-## KNOWLEDGE Domain Classification (OECD 3-Category)
+## KNOWLEDGE Domain Classification (6-Category)
 
-Content routing to KNOWLEDGE subfolders based on OECD classification:
+Content routing to KNOWLEDGE subfolders. **When unsure, `ls "30. KNOWLEDGE/"` to check current categories.**
 
 | Domain | Subfolder | Examples |
 |--------|-----------|----------|
-| Humanities & Arts | `31. Humanities & Arts/` | 철학, 미학, 예술, 언어, 역사, Postmodernism, Vaporwave |
-| Social Sciences | `32. Social Sciences/` | 심리학, 사회학, 경제학, 정치학, Nostalgia, Attention Economy |
-| Engineering & Tech | `33. Engineering & Tech/` | 컴퓨터과학, 전자공학, 기계공학, OAuth, AI |
+| Philosophy & Culture | `31. Philosophy & Culture/` | 철학, 문화이론, 포스트모더니즘, 가속주의 |
+| Art & Aesthetics | `32. Art & Aesthetics/` | 미학, 예술운동, 베이퍼웨이브, 영화, 인터넷미학 |
+| Psychology & Society | `33. Psychology & Society/` | 심리학, 사회학, 노스탤지어, 주의경제 |
+| AI & LLM | `34. AI & LLM/` | AI 도구, 모델, 에이전트, 프롬프트 엔지니어링 |
+| AI — Claude Code | `34. AI & LLM/Claude Code/` | Claude Code 팁, 플러그인, 워크플로우 |
+| Software & Dev | `35. Software & Dev/` | 웹개발, DevOps, 지식관리도구, 비-AI 기술 |
+| Life & Practical | `36. Life & Practical/` | 건강, 가구, 학습법, 수리, 금융 |
 
 **Fine-grained classification**: Use frontmatter `subdomain` field
 ```yaml
 ---
-domain: humanities-arts
-subdomain: philosophy  # or arts, history, linguistics
+domain: philosophy-culture
+subdomain: cultural-theory  # or philosophy, political-thought
 ---
 ```
 
 **Domain values for frontmatter:**
-- `humanities-arts`
-- `social-sciences`
-- `engineering-tech`
+- `philosophy-culture`
+- `art-aesthetics`
+- `psychology-society`
+- `ai-llm`
+- `software-dev`
+- `life-practical`
 
 ---
 
@@ -111,7 +122,8 @@ Folders can be added as needed. Current expandable folders:
 
 ### 30. KNOWLEDGE/
 ```
-31-33              ← existing (OECD 3-category active)
+31-36              ← existing (6-category active)
+37-39              ← reserved for future expansion
 ```
 
 ### 10. INCUBATING/

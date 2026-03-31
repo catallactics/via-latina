@@ -9,7 +9,7 @@
 - **Scopes**: `knowledge`
 - **Paths**: `30. KNOWLEDGE/`, `20. LITERATURE/`
 - **Exclude**: `100. SECURE/**`, `90. SYSTEM/91. Templates/**`, `20. LITERATURE/22. Courses/**`, `README.md`, `*-Log.md`
-- **Sub-trigger**: `/tentatio --knowledge 33` → scan only `33. Engineering & Tech/`
+- **Sub-trigger**: `/tentatio --knowledge 34` → scan only `34. AI & LLM/` (accepts any subfolder number 31-36)
 
 ---
 
@@ -19,7 +19,7 @@
 
 For each `.md` file in scope, extract: `created`, `domain`, `subdomain`, `type`, `maturity`, `tier`, `review_by`.
 
-Validate `domain` against: `humanities-arts|social-sciences|engineering-tech|natural-sciences|medical-sciences|agricultural-sciences`. Flag invalid as WARNING.
+Validate `domain` against: `philosophy-culture|art-aesthetics|psychology-society|ai-llm|software-dev|life-practical`. Legacy values (`humanities-arts|social-sciences|engineering-tech`) accepted but should be migrated. Flag unknown as WARNING.
 
 ### Step 2: Determine Tier
 
@@ -34,12 +34,15 @@ Priority (first match wins):
 
 | Domain | Default | Subdomain Overrides |
 |--------|---------|---------------------|
-| humanities-arts | timeless | all subdomains → timeless |
-| social-sciences | slow-decay | psychology, sociology → timeless |
-| engineering-tech | medium-decay | ai, ml, llm → rapid-decay; protocols → slow-decay |
-| natural-sciences | slow-decay | mathematics → timeless |
-| medical-sciences | slow-decay | — |
-| agricultural-sciences | slow-decay | — |
+| philosophy-culture | timeless | all subdomains → timeless |
+| art-aesthetics | timeless | internet-aesthetics → slow-decay |
+| psychology-society | slow-decay | psychology, sociology → timeless |
+| ai-llm | rapid-decay | prompt-engineering → fast-decay; architecture → medium-decay |
+| software-dev | medium-decay | protocols → slow-decay |
+| life-practical | slow-decay | — |
+| _(legacy)_ humanities-arts | timeless | → migrate to philosophy-culture or art-aesthetics |
+| _(legacy)_ social-sciences | slow-decay | → migrate to psychology-society |
+| _(legacy)_ engineering-tech | medium-decay | → migrate to ai-llm or software-dev |
 
 Unlisted subdomain → use domain default. Unknown domain → Metadata Gap.
 
