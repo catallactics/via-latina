@@ -91,6 +91,15 @@ status: inbox
 ## Vault Connections
 - [[Related Note]] - {relevance}
 
+> [!tip] 잠재적 연결 (Potential Connections)
+> - [[Loosely Related Note]] - {why it might be relevant}
+
+**Connection rules:**
+- **Vault Connections**: Only CONFIRMED connections — same tool, same project, explicit mention, direct dependency
+- **잠재적 연결 callout**: Loose/abstract connections (e.g. "both use AI generation") go here, NOT in main Vault Connections
+- **When unsure**: Put it in 잠재적 연결, or omit entirely. False connections are worse than missing ones.
+- **NEVER force-connect** to active projects (Octa, SNS Pipeline, etc.) without explicit relevance
+
 ## Raw Notes
 > Key excerpts, code snippets, data points
 
